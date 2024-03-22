@@ -1,0 +1,126 @@
+var express = require('express');
+
+var app = express();
+app.set('view engine', 'jade');
+
+app.get('/', function(req, res){
+  res.send('Strona Start');
+});
+
+app.get('/contact', function(req, res){
+  res.send('Strona Kontakt');
+});
+
+app.get('/product', function(req, res){
+  res.send('Strona Produkt');
+});
+
+app.listen(3000);
+
+
+var express = require('express');
+
+var app = express();
+app.set('view engine', 'jade');
+app.use('/assets', express.static('public'));
+
+app.get('/', function(req, res){
+  res.render('index', {query: req.query.id});
+});
+
+app.get('/contact', function(req, res){
+  res.send('Strona Kontakt');
+});
+
+app.get('/product/:id', function(req, res){
+  res.send('Wartosc ID: ' + req.params.id);
+});
+
+app.listen(3000);
+
+
+
+
+var express = require('express');
+
+var app = express();
+app.set('view engine', 'jade');
+
+app.get('/', function(req, res){
+  res.send('Strona Start');
+});
+
+app.get('/contact', function(req, res){
+  res.send('Strona Kontakt');
+});
+
+app.get('/product/:id', function(req, res){
+  res.send('Wartosc ID: ' + req.params.id);
+});
+
+app.listen(3000);
+
+
+
+html
+    head
+        link(rel='stylesheet', href='assets/style.css')
+        body 
+        h1 = query
+
+
+var http = require('http');
+var fs = require('fs');
+
+http.createServer(function(req, res){
+    res.writeHead(200, {'content-type}': 'text/plain'});
+    var 
+}
+
+
+var http = require('http');
+
+http.createServer(function(req, res){
+
+    var data = {
+        id: 456;
+        name: 'node.js'
+        
+    }
+}
+
+
+var http = require("http");
+
+http.createServer(fuction(req, res){
+
+    if(req.url === '/') {
+        res.writeHead(200);
+        res.end('Strona internetowa');
+    } else if (req.url === '/products') {
+        res.writeHead(200);
+        res.end('Strona Produkty');
+    } else if (req.url === '/blog') {
+        res.writeHead(200);
+        res.end('Strona blog');
+    } else {
+        
+    }
+}).listen(3000);
+
+console.log('Serwer uruchomiony');
+
+
+var http = require("http");
+
+http.createServer(fuction(req, res){
+
+    if(req.url === '/') {
+        res.writeHead(200);
+        res.end('Strona internetowa');
+    }
+}).listen(3000);
+
+console.log('Serwer uruchomiony');
+
+var http = require("http");
